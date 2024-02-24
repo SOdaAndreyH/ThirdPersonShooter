@@ -42,14 +42,14 @@ public class PlayerController : MonoBehaviour
             Speed *= 2;
         }
 
-        if (_characterController.isGrounded)
-        {
-            _fallVelocity = 0;
-        }
-
         if (Input.GetKeyDown(KeyCode.Space) && _characterController.isGrounded)
         {
             _fallVelocity = -JumpForce;
+        }
+
+        if (_characterController.isGrounded)
+        {
+            _fallVelocity = 0;
         }
 
     }
